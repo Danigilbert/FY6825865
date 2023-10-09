@@ -41,11 +41,11 @@
         .myslides {display:none;}
 
     </Style>
-    
-                
-
-
-                </style>
+       
+               <style>
+    body {
+        background-color: cream;
+    }
   
         
     </style>
@@ -112,7 +112,29 @@
         <td>2017</td>
     </tr>
     </table>
-    
+
+
+    <head>
+    <style>
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <img src="" alt="Your Image">
+        <p>This is some text that will wrap around the image. This is some text that will wrap around the image. This is some text that will wrap around the image. This is some text that will wrap around the image.</p>
+    </div>
+    <!-- Additional content can go here -->
+</body>
         
     (‘<a>’)
         <a href=”https://www.countercraftsec.com/deception-technology/”>link text</a>.
