@@ -43,42 +43,36 @@
         }
 
         <script>
-  // Define an array containing the URLs of your slideshow images
+<script>
   var slideImages = [
-    'Slide1.JPG',
-    'Slide2.JPG',
-    'Slide3.JPG',
-    'Slide4.JPG',
-    'Slide5.JPG',
-   
+    'Slide1.jpg',
+    'Slide2.jpg',
+    'Slide3.jpg',
+    'Slide4.jpg',
+    'Slide5.jpg',
   ];
 
-  var currentSlide = 0; // Keep track of the current slide index
+  var currentSlide = 0;
 
-  // Function to show a specific slide based on slideNumber
   function showSlideNumber(slideNumber) {
     currentSlide = slideNumber;
     showSlide();
   }
 
-  // Function to update the 'src' attribute of the 'slide' element
   function showSlide() {
     document.getElementById('slide').src = slideImages[currentSlide];
   }
 
-  // Function to move to the next slide
   function nextSlide() {
     currentSlide = (currentSlide + 1) % slideImages.length;
     showSlide();
   }
 
-  // Function to move to the previous slide
   function prevSlide() {
     currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
     showSlide();
   }
 
-  // Execute showSlide() on page load to display the first slide
   window.onload = function () {
     showSlide();
   };
