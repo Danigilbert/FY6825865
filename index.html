@@ -5,21 +5,25 @@
     <style>
        body {
            
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/La_bataille_d%27Austerlitz._2_decembre_1805_%28Fran%C3%A7ois_G%C3%A9rard%29.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: relative;
-  margin: 50px 0 50px 0; /* Top margin: 50px, Bottom margin: 50px, Left and Right margins: 0 */
+  margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-
-img {
-  width: 350px;
-  height: 650px;
-  display: block;
-  margin: 0 auto; /* Center the image horizontally */
-}
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/La_bataille_d%27Austerlitz._2_decembre_1805_%28Fran%C3%A7ois_G%C3%A9rard%29.jpg" alt="Austerlitz Image">
-
+        body::before {
+            content: "";
+            background: rgba(255, 255, 255, 0.5); 
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
         #header {
             background-color: white;
             text-align: left;
@@ -33,6 +37,7 @@ img {
         #content {
             text-align: center;
             padding: 20px;
+            text-colour: white;
         }
 
         h1 {
