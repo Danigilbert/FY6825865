@@ -1,230 +1,185 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Using Napoleon's military deception tactics in Cybersecurity.</title>
-    <style>
-       body {
+  <title>Using Napoleon's military deception tactics in Cybersecurity.</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
 
+    #header {
+      background-color: white;
+      text-align: center;
+    }
 
-  
-        #header {
-            background-color: white;
-            text-align: center;
-        }
+    #logo {
+      max-width: 100%;
+      height: auto;
+    }
 
-        #logo {
-            max-width: 100%;
-            height: auto;
-        }
+    #content {
+      text-align: center;
+      padding: 20px;
+    }
 
-        #content {
-            text-align: center;
-            padding: 20px;
-            
-        }
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-        h1 {
-            font-size: 30px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto; /* Center the table */
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            position: center;
-        }
+    th,
+    td {
+      border: 1px solid #f6f5d9;
+      padding: 8px;
+    }
 
-        th, td {
-            border: 1px solid #f6f5d9;
-            padding: 8px;
-        }
-
-        <script>
-  // Define an array containing the URLs of your slideshow images
-  var slideImages = [
-    'url_of_slide1_image.jpg',
-    'url_of_slide2_image.jpg',
-    'Screenshot 2023-12-02 145138.png',
-    // Add more slide URLs as necessary
-  ];
-
-  var currentSlide = 0; // Keep track of the current slide index
-
-  // Function to show a specific slide based on slideNumber
-  function showSlideNumber(slideNumber) {
-    currentSlide = slideNumber;
-    showSlide();
-  }
-
-  // Function to update the 'src' attribute of the 'slide' element
-  function showSlide() {
-    document.getElementById('slide').src = slideImages[currentSlide];
-  }
-
-  // Function to move to the next slide
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slideImages.length;
-    showSlide();
-  }
-
-  // Function to move to the previous slide
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
-    showSlide();
-  }
-
-  // Execute showSlide() on page load to display the first slide
-  window.onload = function () {
-    showSlide();
-  };
-        
-</script>
     #slide-container {
-  margin-top: 20px;
-  position: relative;
-}
+      margin-top: 20px;
+      text-align: center;
+    }
 
-.button-container, .slidenumber-container {
-  margin-top: 10px;
-}
+    .button-container,
+    .slidenumber-container {
+      margin-top: 10px;
+    }
 
-.button-container button, .slidenumber-container button {
-  padding: 10px;
-  margin: 0 5px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-}
+    .button-container button,
+    .slidenumber-container button {
+      padding: 10px;
+      margin: 0 5px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
 
-.button-container button:hover, .slidenumber-container button:hover {
-  background-color: #0056b3;
-}
-</style>
+    .button-container button:hover,
+    .slidenumber-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
+
 <body>
 
-<div id="header" style="display: flex; align-items: center;">
+  <div id="header" style="display: flex; align-items: center;">
     <img id="logo" src="https://ufp.uk.com/wp-content/uploads/2020/02/University-of-Surrey-1-e1591019506760.png" width="200" height="200" style="margin-right: 10px;">
     <div>
-        <p style="text-align: left;"><b>ENG0018 computer laboratory 2023/24</b></p>
-        <p style="text-align: left;">Student URN: 6825865</p>
+      <p style="text-align: left;"><b>ENG0018 computer laboratory 2023/24</b></p>
+      <p style="text-align: left;">Student URN: 6825865</p>
     </div>
-</div>
+  </div>
 
-<div style="margin: 50px;"> </div>
-    
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/La_bataille_d%27Austerlitz._2_decembre_1805_%28Fran%C3%A7ois_G%C3%A9rard%29.jpg" alt="Image Alt Text" width="650" height="350" style="display: block; margin: auto;">
+  <div style="margin: 50px;"> </div>
 
-    <div style="margin: 10px;"></div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/La_bataille_d%27Austerlitz._2_decembre_1805_%28Fran%C3%A7ois_G%C3%A9rard%29.jpg" alt="Image Alt Text" width="1000" height="500" style="display: block; margin: auto;">
 
-<div id="content">
-   <h1 style="font-size: 40px;">Using Napoleon's military deception tactics in Cybersecurity.</h1>
+  <div style="margin: 10px;"></div>
 
-    <div style="margin: 300px;"> </div>
+  <div id="content">
+    <h1 style="font-size: 40px;">Using Napoleon's military deception tactics in Cybersecurity.</h1>
 
+    <div style="margin: 75px;"> </div>
 
     <table>
-        <tr>
-            <th>Table of contents</th>
-        </tr>
-        <tr>
-            <td><a href="#Abstract">Abstract</a></td>
-        </tr>
-        <tr>
-            <td><a href="#Introduction">Introduction</a></td>
-        </tr>
-        
-        <tr>
-            <td><a href="#MainBody">Main Body</a></td>
-        </tr>
-
-
-    <tr> 
-    <td><a href="#AdaptOrDie(Conclusion)"> Adapt or die (conclusion)
-    </tr>
-
-
-
-        
-        <tr>
-            <td><a href="#References">References</a></td>
-        </tr>
+      <tr>
+        <th>Table of contents</th>
+      </tr>
+      <tr>
+        <td><a href="#Abstract">Abstract</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Introduction">Introduction</a></td>
+      </tr>
+      <tr>
+        <td><a href="#MainBody">Main Body</a></td>
+      </tr>
+      <tr>
+        <td><a href="#AdaptOrDie(Conclusion)">Adapt or die (conclusion)</a></td>
+      </tr>
+      <tr>
+        <td><a href="#References">References</a></td>
+      </tr>
     </table>
 
     <div id="Abstract">
 
-        <h2> Abstract </h2>
-<p>In the $200 billion cybersecurity industry, the surge in cyber threats demands innovative solutions. This article assesses current vulnerabilities across industries, government, and businesses, which can all be exemplified by the recent cyberattacks on the Dallas city council, as well as other events. It critiques the lack of time-intensive nature of current threat intelligence technology, and introduces Cyber Deception, a method of security inspired by historical military tactics. This is a much swifter protocol that involves detecting, delaying, and disorienting attackers in fake environments and is proving to be better than other conventional methods.
-</p>
-        <p> Delving into Cyber Deception, the article unveils deception environments, surpassing traditional honeypots. By strategically bluffing attackers with fake data, managers gain time to fortify real security systems. Emphasizing adaptability, the article highlights the proactive stance of the UK and US governments in adopting deception tactics. As a responsive and effective threat intelligence tool, Cyber Deception is one of the best cybersecurity tools to have in any business’s/government/industry’s arsenal. </p>
+      <h2> Abstract </h2>
+      <p>In the $200 billion cybersecurity industry, the surge in cyber threats demands innovative solutions. This article assesses current vulnerabilities across industries, government, and businesses, which can all be exemplified by the recent cyberattacks on the Dallas city council, as well as other events. It critiques the lack of time-intensive nature of current threat intelligence technology, and introduces Cyber Deception, a method of security inspired by historical military tactics. This is a much swifter protocol that involves detecting, delaying, and disorienting attackers in fake environments and is proving to be better than other conventional methods.
+      </p>
+      <p> Delving into Cyber Deception, the article unveils deception environments, surpassing traditional honeypots. By strategically bluffing attackers with fake data, managers gain time to fortify real security systems. Emphasizing adaptability, the article highlights the proactive stance of the UK and US governments in adopting deception tactics. As a responsive and effective threat intelligence tool, Cyber Deception is one of the best cybersecurity tools to have in any business’s/government/industry’s arsenal. </p>
     </div>
 
     <div id="Introduction">
 
-        <h2> Introduction </h2>
-<p> In the rapidly evolving $200 billion cybersecurity industry ("Cyber Security Market Size, Share & Trends Report, 2030"), the perpetual struggle to outpace the always-increasing skill of modern hacker groups remains the same. Despite heightened global awareness, IT security companies face relentless pressure as solutions are circumvented, strongly encouraging constant adaptation. The threat landscape's sophistication causes concerns, with ransomware damages projected to reach nearly $24 trillion annually by 2027 (Fleck). This convergence of technological advancement, persistent threats, and escalating economic consequences highlights the critical need to address cybersecurity challenges, as even year-old solutions risk becoming obsolete in this competitive environment.
- </p>
-        
-        <table>
-            <tr>
-                <th>Estimated cost of cybercrime in $ trillion(s)(Fleck)</th>
-                <th>Year</th>
-            </tr>
-            
-            <tr>
-                <td>0.86</td>
-                <td>2018</td>
-            </tr>
-            <tr>
-                <td>1.16</td>
-                <td>2019</td>
-            </tr>
-            <tr>
-                <td>2.95</td>
-                <td>2020</td>
-            </tr>
+      <h2> Introduction </h2>
+      <p> In the rapidly evolving $200 billion cybersecurity industry ("Cyber Security Market Size, Share & Trends Report, 2030"), the perpetual struggle to outpace the always-increasing skill of modern hacker groups remains the same. Despite heightened global awareness, IT security companies face relentless pressure as solutions are circumvented, strongly encouraging constant adaptation. The threat landscape's sophistication causes concerns, with ransomware damages projected to reach nearly $24 trillion annually by 2027 (Fleck). This convergence of technological advancement, persistent threats, and escalating economic consequences highlights the critical need to address cybersecurity challenges, as even year-old solutions risk becoming obsolete in this competitive environment.
+      </p>
 
-            <tr>
-                <td>5.99</td>
-                <td>2021</td>
-            </tr>
-            
-            <tr>
-                <td>8.44</td>
-                <td>2022</td>
-            </tr>
-            
-            <tr>
-                <td>11.50</td>
-                <td>2023</td>
-            </tr>
-            
-            <tr>
-                <td>14.57</td>
-                <td>2024</td>
-            </tr>
-            
-            <tr>
-                <td>17.65</td>
-                <td>2025</td>
-            </tr>
+      <table>
+        <tr>
+          <th>Estimated cost of cybercrime in $ trillion(s)(Fleck)</th>
+          <th>Year</th>
+        </tr>
 
-            <tr>
-                <td>20.74</td>
-                <td>2026</td>
-            </tr>
+        <tr>
+          <td>0.86</td>
+          <td>2018</td>
+        </tr>
+        <tr>
+          <td>1.16</td>
+          <td>2019</td>
+        </tr>
+        <tr>
+          <td>2.95</td>
+          <td>2020</td>
+        </tr>
 
-            <tr>
-                <td>23.82</td>
-                <td>2027</td>
-            </tr>
+        <tr>
+          <td>5.99</td>
+          <td>2021</td>
+        </tr>
 
-            
-        </table>
+        <tr>
+          <td>8.44</td>
+          <td>2022</td>
+        </tr>
+
+        <tr>
+          <td>11.50</td>
+          <td>2023</td>
+        </tr>
+
+        <tr>
+          <td>14.57</td>
+          <td>2024</td>
+        </tr>
+
+        <tr>
+          <td>17.65</td>
+          <td>2025</td>
+        </tr>
+
+        <tr>
+          <td>20.74</td>
+          <td>2026</td>
+        </tr>
+
+        <tr>
+          <td>23.82</td>
+          <td>2027</td>
+        </tr>
+
 
     
 <h2>Main body. </h2>
