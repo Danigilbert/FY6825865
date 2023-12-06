@@ -56,7 +56,70 @@
             border: 1px solid #f6f5d9;
             padding: 8px;
         }
-    </style>
+
+        <script>
+  // Define an array containing the URLs of your slideshow images
+  var slideImages = [
+    'url_of_slide1_image.jpg',
+    'url_of_slide2_image.jpg',
+    'url_of_slide3_image.jpg',
+    // Add more slide URLs as necessary
+  ];
+
+  var currentSlide = 0; // Keep track of the current slide index
+
+  // Function to show a specific slide based on slideNumber
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber;
+    showSlide();
+  }
+
+  // Function to update the 'src' attribute of the 'slide' element
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide];
+  }
+
+  // Function to move to the next slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideImages.length;
+    showSlide();
+  }
+
+  // Function to move to the previous slide
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+  }
+
+  // Execute showSlide() on page load to display the first slide
+  window.onload = function () {
+    showSlide();
+  };
+        
+</script>
+    #slide-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+.button-container, .slidenumber-container {
+  margin-top: 10px;
+}
+
+.button-container button, .slidenumber-container button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-container button:hover, .slidenumber-container button:hover {
+  background-color: #0056b3;
+}
+</style>
 </head>
 <body>
 
@@ -95,6 +158,9 @@
     <tr> 
     <td><a href="#AdaptOrDie(Conclusion)"> Adapt or die (conclusion)
     </tr>
+
+
+
         
         <tr>
             <td><a href="#References">References</a></td>
@@ -200,6 +266,22 @@ This gives the managers of the deception environment time to not only collect va
 </p>
             
     </div>
+
+    <div id="slide-container" style="text-align: center;">
+  <img id="slide" src="" alt="Slide Image" style="max-width: 100%; height: auto;">
+  <div class="button-container">
+    <button onclick="prevSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+  </div>
+  <div class="slidenumber-container">
+    <!-- Create buttons for each slide -->
+    <button onclick="showSlideNumber(0)">1</button>
+    <button onclick="showSlideNumber(1)">2</button>
+    <button onclick="showSlideNumber(2)">3</button>
+    <!-- Add more buttons for additional slides -->
+  </div>
+</div>
+
 
     <div id="References">
 
