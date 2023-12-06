@@ -8,67 +8,105 @@
       font-family: 'Arial', sans-serif;
     }
 
-    #header {
-      background-color: white;
-      text-align: center;
-    }
+        #header {
+            background-color: white;
+            text-align: center;
+        }
 
-    #logo {
-      max-width: 100%;
-      height: auto;
-    }
+        #logo {
+            max-width: 100%;
+            height: auto;
+        }
 
-    #content {
-      text-align: center;
-      padding: 20px;
-    }
+        #content {
+            text-align: center;
+            padding: 20px;
+            
+        }
 
-    h1 {
-      font-size: 30px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0 auto; /* Center the table */
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            position: center;
+        }
 
-    th,
-    td {
-      border: 1px solid #f6f5d9;
-      padding: 8px;
-    }
+        th, td {
+            border: 1px solid #f6f5d9;
+            padding: 8px;
+        }
 
+        <script>
+  // Define an array containing the URLs of your slideshow images
+  var slideImages = [
+    'url_of_slide1_image.jpg',
+    'url_of_slide2_image.jpg',
+    'Screenshot 2023-12-02 145138.png',
+    // Add more slide URLs as necessary
+  ];
+
+  var currentSlide = 0; // Keep track of the current slide index
+
+  // Function to show a specific slide based on slideNumber
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber;
+    showSlide();
+  }
+
+  // Function to update the 'src' attribute of the 'slide' element
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide];
+  }
+
+  // Function to move to the next slide
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideImages.length;
+    showSlide();
+  }
+
+  // Function to move to the previous slide
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+  }
+
+  // Execute showSlide() on page load to display the first slide
+  window.onload = function () {
+    showSlide();
+  };
+        
+</script>
     #slide-container {
-      margin-top: 20px;
-      text-align: center;
-    }
+  margin-top: 20px;
+  position: relative;
+}
 
-    .button-container,
-    .slidenumber-container {
-      margin-top: 10px;
-    }
+.button-container, .slidenumber-container {
+  margin-top: 10px;
+}
 
-    .button-container button,
-    .slidenumber-container button {
-      padding: 10px;
-      margin: 0 5px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.button-container button, .slidenumber-container button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-    .button-container button:hover,
-    .slidenumber-container button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+.button-container button:hover, .slidenumber-container button:hover {
+  background-color: #0056b3;
+}
+</style>
 </head>
+<body>
 
 <body>
 
