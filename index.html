@@ -312,22 +312,60 @@ This gives the managers of the deception environment time to not only collect va
         
     </div>
     <div id="slide-container">
-<img id="slide" src= "Screenshot 2023-12-02 145005.png" alt="Slide1.jpg"  styles=width:"100%"; max-width:800px;">
+
+
+<div id="slide-container">
+  <img id="slide" src="Screenshot 2023-12-02 145005.png" alt="Slide1.jpg" style="width:100%; max-width:800px;">
   
   <div class="button-container">
     <button onclick="prevSlide()">Previous</button>
     <button onclick="nextSlide()">Next</button>
   </div>
+  
   <div class="slidenumber-container">
     <!-- Create buttons for each slide -->
     <button onclick="showSlideNumber(0)">1</button>
-    <button onclick="showSlideNumber('Screenshot 2023-12-02 145055.png')">2</button>
-    <button onclick="showSlideNumber('Screenshot 2023-12-02 145138.png')">3</button>
-    <button onclick="showSlideNumber('Screenshot 2023-12-06 214404.png')">4</button>
-    <button onclick="showSlideNumber('Screenshot 2023-12-06 214432.png')">5</button>
+    <button onclick="showSlideNumber(1)">2</button>
+    <button onclick="showSlideNumber(2)">3</button>
+    <button onclick="showSlideNumber(3)">4</button>
+    <button onclick="showSlideNumber(4)">5</button>
     <!-- Add more buttons for additional slides -->
   </div>
 </div>
+
+<script>
+  let currentSlide = 0;
+  const filenames = [
+    'Screenshot 2023-12-02 145005.png',
+    'Screenshot 2023-12-02 145055.png',
+    'Screenshot 2023-12-02 145138.png',
+    'Screenshot 2023-12-06 214404.png',
+    'Screenshot 2023-12-06 214432.png'
+  ];
+
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber;
+    updateSlide();
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % filenames.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + filenames.length) % filenames.length;
+    updateSlide();
+  }
+
+  function updateSlide() {
+    document.getElementById('slide').src = filenames[currentSlide];
+  }
+
+  // Initial update to show the first slide
+  updateSlide();
+</script>
+
 
 </body>
 </html>
